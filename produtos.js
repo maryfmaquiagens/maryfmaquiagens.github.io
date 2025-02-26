@@ -6,7 +6,7 @@ const produtos = [
       descricao: "Lenço umedecido para limpeza facial, com ingredientes suaves e ideais para pele sensível." 
     },
     { 
-      nome: "Esponja Para Base", 
+      nome: "Esponja para Base", 
       preco: 4, 
       imagem: "produto1.jpeg", 
       descricao: "Esponja macia para aplicação de base líquida, garantindo um acabamento natural." 
@@ -30,7 +30,7 @@ const produtos = [
       descricao: "Batom de longa duração com cores vibrantes." 
     },
     { 
-      nome: "Sabonete", 
+      nome: "Sabonete Facil", 
       preco: 15, 
       imagem: "sabonete.jpeg", 
       descricao: "Sabonete para limpeza facial, enriquecido com vitamina C." 
@@ -43,25 +43,25 @@ const produtos = [
     },
     { 
       nome: "Gloss", 
-      preco: 12, 
+      preco: 14, 
       imagem: "gloss.jpeg", 
       descricao: "Gloss brilhante que proporciona um toque sedoso e um efeito iluminado aos lábios." 
     },
     { 
-      nome: "Mascara Facial", 
+      nome: "Máscara Facial", 
       preco: 2, 
       imagem: "mascarafacil.jpeg", 
       descricao: "Máscara facial para suavizar e revitalizar a pele, ideal para uma rotina de beleza." 
     },
     { 
       nome: "Iluminador", 
-      preco: 15, 
+      preco: 16, 
       imagem: "iluminador.jpeg", 
-      descricao: "Pó compacto de alta cobertura para finalizar a maquiagem com um acabamento impecável." 
+      descricao: "Destaca pontos do rosto com brilho e efeito glow." 
     },
     { 
       nome: "Lápis de Olho", 
-      preco: 12, 
+      preco: 7, 
       imagem: "lapis.jpeg", 
       descricao: "Lápis de olho de alta definição para realçar e contornar os olhos com precisão." 
     },
@@ -73,69 +73,69 @@ const produtos = [
     },
     { 
       nome: "Escova de Silicone", 
-      preco: 4, 
+      preco: 12, 
       imagem: "escovasilicone.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Massageia o couro cabeludo, ajudando na limpeza e estimulação capilar." 
     },
     { 
       nome: "Esponja para Pó", 
-      preco: 12, 
+      preco: 4, 
       imagem: "esponjapo.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Aplica pó compacto ou solto para um acabamento uniforme." 
     },
     { 
       nome: "Apontador", 
       preco: 10, 
       imagem: "apontador.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Mantém lápis de olho e boca afiados para maior precisão." 
     },
     { 
       nome: "Blindagem", 
       preco: 14, 
       imagem: "blindagem.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Protege e fixa a maquiagem, aumentando sua durabilidade." 
     },
     { 
       nome: "Paleta de Sombra", 
       preco: 20, 
       imagem: "paletasombra.png", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Define e colore as pálpebras, realçando o olhar." 
     },
     { 
       nome: "Primer Facil", 
       preco: 16, 
       imagem: "primerfacial.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Prepara a pele, suavizando poros e melhorando a fixação da maquiagem." 
     },
     { 
-      nome: "Serum Clareador", 
+      nome: "Sérum Clareador", 
       preco: 14, 
       imagem: "serumclareador.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Uniformiza o tom da pele e ajuda a reduzir manchas." 
     },
     { 
       nome: "Lip Gloss", 
       preco: 15, 
       imagem: "lipgloss.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Dá brilho e efeito molhado aos lábios." 
     },
     { 
-      nome: "Cilios", 
+      nome: "Cílios", 
       preco: 10, 
       imagem: "cilios.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Alongam e dão volume aos olhos, destacando o olhar." 
     },
     { 
-      nome: "Serum Rosa Mosqueta", 
+      nome: "Sérum Rosa Mosqueta", 
       preco: 15, 
       imagem: "serumrosa.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Hidrata e auxilia na regeneração da pele." 
     },
     { 
-      nome: "torre de pigmento neon", 
+      nome: "Torre de Pigmento Neon", 
       preco: 12, 
       imagem: "torre.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Conjunto de sombras vibrantes e bem pigmentadas, ideal para maquiagens artísticas e looks de Carnaval, trazendo cores intensas e chamativas." 
     }
   ];
   
