@@ -27,7 +27,11 @@ const produtos = [
       nome: "Batom", 
       preco: 15, 
       imagem: "batom.jpeg", 
-      descricao: "Batom de longa duração com cores vibrantes." 
+      descricao: "Batom de longa duração com cores vibrantes." ,
+      variantes: [
+        { cor: "Vermelho", imagem: "batomvermelho.jpeg" },
+        { cor: "Rosa", imagem: "batomrosa.jpeg" }
+      ]
     },
     { 
       nome: "Sabonete Facil", 
@@ -141,7 +145,17 @@ const produtos = [
       preco: 12, 
       imagem: "torre.jpeg", 
       descricao: "Conjunto de sombras vibrantes e bem pigmentadas, ideal para maquiagens artísticas e looks de Carnaval, trazendo cores intensas e chamativas." 
-    }
+    },
+    { 
+      nome: "Batom Magic", 
+      preco: 4, 
+      imagem: "vermelhomagic.jpeg", 
+      descricao: "Batom de longa duração com cores vibrantes." ,
+      variantes: [
+        { cor: "Vermelho", imagem: "vermelhomagic.jpeg" },
+        { cor: "Roxo", imagem: "roxomagic.jpeg" }
+      ]
+    },
   ];
   
   // Variável para controlar quantos produtos são exibidos inicialmente
