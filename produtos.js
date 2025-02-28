@@ -43,9 +43,14 @@ const produtos = [
     },
     { 
       nome: "Gloss", 
-      preco: 14, 
-      imagem: "gloss.jpeg", 
-      descricao: "Gloss brilhante que proporciona um toque sedoso e um efeito iluminado aos lábios." 
+      preco: 14,  
+      imagem: "gloss_vermelho.jpeg",
+      descricao: "Gloss brilhante que proporciona um toque sedoso e um efeito iluminado aos lábios." ,
+      variantes: [
+        { cor: "Vermelho", imagem: "gloss_vermelho.jpeg" },
+        { cor: "Rosa", imagem: "gloss_rosa.jpeg" },
+        { cor: "Nude", imagem: "gloss_nude.jpeg" }
+      ]
     },
     { 
       nome: "Máscara Facial", 
@@ -161,33 +166,54 @@ const produtos = [
       const limite = mostrarTodos ? produtosFiltrados.length : produtosExibidos;
   
       produtosFiltrados.slice(0, limite).forEach(produto => {
-          const produtoHTML = `
-              <div class="bg-[#ccac8e] p-4 rounded-lg shadow hover:scale-105 transition-transform">
-                  <img src="${produto.imagem}" alt="${produto.nome}" class="w-full h-64 object-contain rounded">
-                  <h2 class="text-lg font-bold mt-2">${produto.nome}</h2>
-                  <p class="text-gray-600">R$ ${produto.preco.toFixed(2)}</p>
-                  
-                  <!-- Botão de Descrição -->
-                  <div class="w-full flex justify-center mb-2">
-                      <button onclick="abrirDescricao(this)" data-descricao="${produto.descricao}"
-                          class="bg-green-600 px-3 py-2 rounded text-white flex items-center gap-2">
-                          Descrição ->
-                      </button>
+        let variantesHTML = "";
+        if (produto.variantes && produto.variantes.length > 0) {
+          variantesHTML = `
+            <div class="w-full flex items-center justify-center mb-2 space-x-4">
+              <p class="text-gray-700">Opções:</p>
+              <div class="flex overflow-x-auto space-x-2" style="scroll-behavior: smooth; max-width: 150px;">
+                ${produto.variantes.map(variante => `
+                  <div onclick="atualizarVariante(this, '${produto.nome}', '${variante.imagem}')" class="flex-shrink-0 w-16 h-16 border rounded cursor-pointer">
+                    <img src="${variante.imagem}" alt="${variante.cor}" class="w-full h-full object-contain">
                   </div>
-                  
-                  <div class="flex justify-center mt-3 space-x-2">
-                      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-800"
-                          onclick="comprarProduto('${produto.nome}', ${produto.preco})">
-                          COMPRAR
-                      </button>
-                      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-800 flex items-center gap-2"
-                          onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">
-                          <img src="carrinho.png" alt="Carrinho" class="w-6 h-6">+
-                      </button>
-                  </div>
+                `).join('')}
               </div>
+            </div>
           `;
-          listaProdutos.innerHTML += produtoHTML;
+        }
+        
+        const produtoHTML = `
+    <div class="bg-[#ccac8e] p-4 rounded-lg shadow hover:scale-105 transition-transform">
+      <!-- Imagem principal com tamanho padronizado -->
+      <img id="img-${produto.nome.replace(/\s+/g, '')}" src="${produto.imagem}" alt="${produto.nome}" class="w-full h-64 object-contain rounded">
+      <h2 class="text-lg font-bold mt-2">${produto.nome}</h2>
+      <p class="text-gray-600">R$ ${produto.preco.toFixed(2)}</p>
+      
+      <!-- Botão de Descrição: sempre exibido -->
+      <div class="w-full flex justify-center mb-2">
+        <button onclick="abrirDescricao(this)" data-descricao="${produto.descricao}"
+          class="bg-gray-500 px-3 py-2 rounded text-white flex items-center gap-2">
+          Descrição ->
+        </button>
+      </div>
+      
+      <!-- Se o produto possuir variantes, exibe o slider -->
+      ${variantesHTML}
+      
+      <!-- Botões de Comprar e Adicionar ao Carrinho -->
+      <div class="flex justify-center mt-3 space-x-2">
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-800"
+          onclick="comprarProduto('${produto.nome}', ${produto.preco})">
+          COMPRAR
+        </button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-blue-800 flex items-center gap-2"
+          onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">
+          <img src="carrinho.png" alt="Carrinho" class="w-6 h-6">+
+        </button>
+      </div>
+    </div>
+  `;
+  listaProdutos.innerHTML += produtoHTML;
       });
   
       // Se já mostrou todos os produtos, oculta o botão "Ver mais"
@@ -214,13 +240,34 @@ const produtos = [
     const descricao = botao.getAttribute("data-descricao");
     document.getElementById("conteudo-descricao").innerText = descricao;
     document.getElementById("modal-descricao").classList.remove("hidden");
+  }
+  
+  function fecharDescricao() {
+    document.getElementById("modal-descricao").classList.add("hidden");
+  }  
+
+function atualizarVariante(elemento, nomeProduto, novaImagem) {
+  // Cria um ID único para a imagem principal com base no nome do produto
+  const idImagem = "img-" + nomeProduto.replace(/\s+/g, '');
+  const imgElemento = document.getElementById(idImagem);
+  if (imgElemento) {
+    imgElemento.src = novaImagem;
+  }
 }
 
-function fecharDescricao() {
-    document.getElementById("modal-descricao").classList.add("hidden");
+function scrollVariants(botao, direcao) {
+  // Localiza o container de variantes: ele é o <div class="flex overflow-x-auto ...">, irmão dos botões.
+  const container = botao.parentElement.querySelector("div.flex.overflow-x-auto");
+  if (container) {
+    const scrollAmount = 100; // Valor em pixels para rolar; ajuste conforme necessário.
+    if (direcao === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
 }
   
   document.getElementById("search-input").addEventListener("input", function () {
       carregarProdutos(this.value);
   });
-  
