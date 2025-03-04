@@ -22,13 +22,23 @@ function adicionarAoCarrinho(nomeProduto, precoProduto) {
 
   setTimeout(() => {
     aviso.style.display = "none";
-}, 3000);
-
+  }, 3000);
 }
-
 
 function atualizarCarrinho() {
   document.getElementById("total-items").textContent = carrinho.length;
+}
+
+// Função para remover um produto específico do carrinho (apenas a primeira ocorrência)
+function removerDoCarrinho(nomeProduto) {
+  const index = carrinho.findIndex(produto => produto.nome === nomeProduto);
+  if (index !== -1) {
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
+    abrirCarrinho(); // Atualiza o modal do carrinho após remoção
+  } else {
+    console.error("Produto não encontrado no carrinho.");
+  }
 }
 
 function abrirCarrinho() {
@@ -40,22 +50,39 @@ function abrirCarrinho() {
 
   carrinho.forEach(produto => {
     const item = document.createElement("li");
-    item.classList.add("flex", "items-center", "justify-between", "border-b", "py-2");
-    
+    // Adiciona padding à direita para liberar espaço para o botão "×"
+    item.classList.add("relative", "flex", "items-center", "border-b", "py-2", "pr-10");
+
+    // Cria o botão "×" para remover o produto
+    const btnRemove = document.createElement("button");
+    btnRemove.textContent = "×";
+    btnRemove.classList.add("absolute", "top-0", "right-0", "text-red-500", "font-bold", "p-1");
+    btnRemove.style.background = "none";
+    btnRemove.style.border = "none";
+    btnRemove.style.cursor = "pointer";
+    btnRemove.style.fontSize = "1.5rem"; // Aumenta o tamanho do "×"
+    btnRemove.onclick = function() {
+      removerDoCarrinho(produto.nome);
+    };
+
     const imagem = document.createElement("img");
     imagem.src = produto.imagem;
     imagem.alt = produto.nome;
     imagem.classList.add("w-12", "h-12", "rounded", "mr-2");
-    
+
+    // Container dos detalhes sem margem extra; centralizado
     const detalhes = document.createElement("div");
-    detalhes.innerHTML = `<p class="text-sm">${produto.nome}</p>
-                          <p class="text-gray-600 text-sm">R$ ${produto.preco.toFixed(2)}</p>`;
-    
+    detalhes.classList.add("flex", "flex-col", "items-center", "w-full");
+    detalhes.innerHTML = `<p class="text-sm text-center">${produto.nome}</p>
+                          <p class="text-gray-600 text-sm text-center">R$ ${produto.preco.toFixed(2)}</p>`;
+
+    // Monta o item
+    item.appendChild(btnRemove);
     item.appendChild(imagem);
     item.appendChild(detalhes);
     listaItens.appendChild(item);
-    
-    total += produto.preco; // Acumula o valor total
+
+    total += produto.preco;
   });
 
   // Cria e adiciona o elemento que exibe o valor total

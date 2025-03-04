@@ -3,25 +3,25 @@ const produtos = [
       nome: "Lenço Umedecido", 
       preco: 8, 
       imagem: "lenço.jpeg", 
-      descricao: "Lenço umedecido para limpeza facial, com ingredientes suaves e ideais para pele sensível." 
+      descricao: "Lenço umedecido para limpeza facial,\n com ingredientes suaves e ideais\n para pele sensível." 
     },
     { 
       nome: "Esponja para Base", 
       preco: 4, 
       imagem: "produto1.jpeg", 
-      descricao: "Esponja macia para aplicação de base líquida, garantindo um acabamento natural." 
+      descricao: "Esponja macia para aplicação de base\n líquida, garantindo um acabamento natural." 
     },
     { 
       nome: "Rímel", 
       preco: 10, 
       imagem: "produto2.jpeg", 
-      descricao: "Máscara de cílios extra volume que realça seus olhos com volume e definição." 
+      descricao: "Máscara de cílios extra volume que realça\n seus olhos com volume e definição." 
     },
     { 
       nome: "Água Micelar", 
       preco: 12, 
       imagem: "aguamicelar.jpeg", 
-      descricao: "Água micelar suave que remove impurezas e maquiagem sem agredir a pele." 
+      descricao: "Água micelar suave que remove impurezas\n e maquiagem sem agredir a pele." 
     },
     { 
       nome: "Batom", 
@@ -37,19 +37,19 @@ const produtos = [
       nome: "Sabonete Facil", 
       preco: 15, 
       imagem: "sabonete.jpeg", 
-      descricao: "Sabonete para limpeza facial, enriquecido com vitamina C." 
+      descricao: "Sabonete para limpeza facial, enriquecido\n com vitamina C." 
     },
     { 
       nome: "Sérum", 
       preco: 15, 
       imagem: "serumesfoliante.jpeg", 
-      descricao: "Sérum antioxidante que ajuda a iluminar e proteger a pele dos radicais livres." 
+      descricao: "Sérum antioxidante que ajuda a iluminar e\n proteger a pele dos radicais livres." 
     },
     { 
       nome: "Gloss", 
       preco: 14,  
       imagem: "gloss_vermelho.jpeg",
-      descricao: "Gloss brilhante que proporciona um toque sedoso e um efeito iluminado aos lábios." ,
+      descricao: "Gloss brilhante que proporciona um toque\n sedoso e um efeito iluminado aos lábios." ,
       variantes: [
         { cor: "Vermelho", imagem: "gloss_vermelho.jpeg" },
         { cor: "Rosa", imagem: "gloss_rosa.jpeg" },
@@ -60,7 +60,7 @@ const produtos = [
       nome: "Máscara Facial", 
       preco: 2, 
       imagem: "mascarafacil.jpeg", 
-      descricao: "Máscara facial para suavizar e revitalizar a pele, ideal para uma rotina de beleza." 
+      descricao: "Máscara facial para suavizar e revitalizar a\n pele, ideal para uma rotina de beleza." 
     },
     { 
       nome: "Iluminador", 
@@ -72,55 +72,49 @@ const produtos = [
       nome: "Lápis de Olho", 
       preco: 7, 
       imagem: "lapis.jpeg", 
-      descricao: "Lápis de olho de alta definição para realçar e contornar os olhos com precisão." 
+      descricao: "Lápis de olho de alta definição para realçar e\n contornar os olhos com precisão." 
     },
     { 
       nome: "Delineador", 
       preco: 10, 
       imagem: "delineador.jpeg", 
-      descricao: "Delineador prático e preciso para um look marcante e bem definido." 
+      descricao: "Delineador prático e preciso para um look\n marcante e bem definido." 
     },
     { 
       nome: "Escova de Silicone", 
       preco: 12, 
       imagem: "escovasilicone.jpeg", 
-      descricao: "Massageia o couro cabeludo, ajudando na limpeza e estimulação capilar." 
+      descricao: "Massageia o couro cabeludo, ajudando na\n limpeza e estimulação capilar." 
     },
     { 
       nome: "Esponja para Pó", 
       preco: 4, 
       imagem: "esponjapo.jpeg", 
-      descricao: "Aplica pó compacto ou solto para um acabamento uniforme." 
+      descricao: "Aplica pó compacto ou solto para um\n acabamento uniforme." 
     },
     { 
       nome: "Apontador", 
       preco: 10, 
       imagem: "apontador.jpeg", 
-      descricao: "Mantém lápis de olho e boca afiados para maior precisão." 
+      descricao: "Mantém lápis de olho e boca afiados\n para maior precisão." 
     },
     { 
       nome: "Blindagem", 
       preco: 14, 
       imagem: "blindagem.jpeg", 
-      descricao: "Protege e fixa a maquiagem, aumentando sua durabilidade." 
+      descricao: "Protege e fixa a maquiagem, aumentando\n sua durabilidade." 
     },
     { 
       nome: "Paleta de Sombra", 
       preco: 20, 
       imagem: "paletasombra.png", 
-      descricao: "Define e colore as pálpebras, realçando o olhar." 
-    },
-    { 
-      nome: "Primer Facil", 
-      preco: 16, 
-      imagem: "primerfacial.jpeg", 
-      descricao: "Prepara a pele, suavizando poros e melhorando a fixação da maquiagem." 
+      descricao: "Define e colore as pálpebras,\n realçando o olhar." 
     },
     { 
       nome: "Sérum Clareador", 
       preco: 14, 
       imagem: "serumclareador.jpeg", 
-      descricao: "Uniformiza o tom da pele e ajuda a reduzir manchas." 
+      descricao: "Uniformiza o tom da pele e ajuda\n a reduzir manchas." 
     },
     { 
       nome: "Lip Gloss", 
@@ -132,19 +126,19 @@ const produtos = [
       nome: "Cílios", 
       preco: 10, 
       imagem: "cilios.jpeg", 
-      descricao: "Alongam e dão volume aos olhos, destacando o olhar." 
+      descricao: "Alongam e dão volume aos olhos,\n destacando o olhar." 
     },
     { 
       nome: "Sérum Rosa Mosqueta", 
       preco: 15, 
       imagem: "serumrosa.jpeg", 
-      descricao: "Hidrata e auxilia na regeneração da pele." 
+      descricao: "Hidrata e auxilia na regeneração\n da pele." 
     },
     { 
       nome: "Torre de Pigmento Neon", 
       preco: 12, 
       imagem: "torre.jpeg", 
-      descricao: "Conjunto de sombras vibrantes e bem pigmentadas, ideal para maquiagens artísticas e looks de Carnaval, trazendo cores intensas e chamativas." 
+      descricao: "Conjunto de sombras vibrantes e bem pigmentadas,\n ideal para maquiagens artísticas e looks de\n Carnaval, trazendo cores intensas e chamativas." 
     },
     { 
       nome: "Batom Magic", 
@@ -285,3 +279,4 @@ function scrollVariants(botao, direcao) {
   document.getElementById("search-input").addEventListener("input", function () {
       carregarProdutos(this.value);
   });
+  
