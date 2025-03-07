@@ -145,6 +145,24 @@ const produtos = [
     descricao: "Hidrata e auxilia na regeneração\n da pele." 
   },
   { 
+    nome: "Spray Fixado de Maquiagens", 
+    preco: 15, 
+    imagem: "spray(1).jpg", 
+    descricao: "O Fix Make UP foi criado para aumentar a\n durabilidade da maquiagem de forma leve e bem prática,\n ele possui secagem rápida fazendo com que\n a pele não fique úmida." 
+  },
+  { 
+    nome: "Mousse Micelar", 
+    preco: 16,  
+    imagem: "mousse.png", 
+    descricao: "Vegano não ressega a pele,\n HIDRATAÇÃO EQUILIBRADA,\n CONTROLA A OLEOSIDADE,\n ESTIMULA A RENOVAÇÃO CELULAR,\n DERMATOLOGICAMENTE TESTADO." 
+  },
+  { 
+    nome: "Black mask com colageno", 
+    preco: 14, 
+    imagem: "blackmascara.jpeg", 
+    descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele." 
+  },
+  { 
     nome: "Torre de Pigmento Neon", 
     preco: 12, 
     imagem: "torre.jpeg", 
