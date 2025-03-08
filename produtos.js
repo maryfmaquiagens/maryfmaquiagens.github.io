@@ -41,7 +41,7 @@ const produtos = [
     descricao: "Sabonete para limpeza facial, enriquecido\n com vitamina C." 
   },
   { 
-    nome: "Sérum", 
+    nome: "Sérum Esfoliante", 
     preco: 15, 
     imagem: "serumesfoliante.jpeg", 
     descricao: "Sérum antioxidante que ajuda a iluminar e\n proteger a pele dos radicais livres." 
@@ -147,33 +147,33 @@ const produtos = [
   { 
     nome: "Spray Fixado de Maquiagens", 
     preco: 15, 
-    imagem: "spray(1).jpg", 
+    imagem: "spray.jpeg", 
     descricao: "O Fix Make UP foi criado para aumentar a\n durabilidade da maquiagem de forma leve e bem prática,\n ele possui secagem rápida fazendo com que\n a pele não fique úmida." 
   },
   { 
     nome: "Mousse Micelar", 
     preco: 16,  
-    imagem: "mousse.png", 
+    imagem: "mousse.jpeg", 
     descricao: "Vegano não ressega a pele,\n HIDRATAÇÃO EQUILIBRADA,\n CONTROLA A OLEOSIDADE,\n ESTIMULA A RENOVAÇÃO CELULAR,\n DERMATOLOGICAMENTE TESTADO." 
   },
   { 
     nome: "Black mask com colageno", 
     preco: 14, 
-    imagem: "blackmascara.jpeg", 
+    imagem: "blackmask.jpeg", 
     descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele." 
+  },
+  { 
+    nome: "Esfoliante Corporal", 
+    preco: 15, 
+    imagem: "esfoliantecorporal.jpeg", 
+    descricao: "Esfoliação eficiente e muito agradável\n sem agredir a pele, removendo células mortas,\n eliminando acúmulo de sujeiras e produtos depositados nos poros,\n revelando a uniformidade do tom da pele,\n toque ultra macio, textura lisa e sedosa.", 
+    disponibilidade: "esgotado" 
   },
   { 
     nome: "Torre de Pigmento Neon", 
     preco: 12, 
     imagem: "torre.jpeg", 
     descricao: "Conjunto de sombras vibrantes e bem pigmentadas,\n ideal para maquiagens artísticas e looks de\n Carnaval, trazendo cores intensas e chamativas." 
-  },
-  { 
-    nome: "Bruma", 
-    preco: 12, 
-    imagem: "Bruma.jpeg", 
-    descricao: "é um spray ideal para preparar e hidratar\n a pele antes ou após a maquiagem.",
-    disponibilidade: "esgotado" 
   },
   { 
     nome: "Batom Magic", 
@@ -184,11 +184,11 @@ const produtos = [
       { cor: "Vermelho", imagem: "vermelhomagic.jpeg" },
       { cor: "Roxo", imagem: "roxomagic.jpeg" }
     ]
-  },
+  }
 ];
 
-// Variável para controlar quantos produtos são exibidos inicialmente
-let produtosExibidos = 8;
+// Número inicial de produtos a serem exibidos
+let produtosExibidos = 11;
 
 function carregarProdutos(termoBusca = "", mostrarTodos = false) {
   const listaProdutos = document.getElementById("lista-produtos");
@@ -283,7 +283,9 @@ function carregarProdutos(termoBusca = "", mostrarTodos = false) {
 }
 
 function mostrarMaisProdutos() {
-  carregarProdutos("", true);
+  // Incrementa o número de produtos exibidos em 8 a cada clique
+  produtosExibidos += 11;
+  carregarProdutos();
 }
 
 window.onload = function () {
