@@ -154,13 +154,15 @@ const produtos = [
     nome: "Mousse Micelar", 
     preco: 16,  
     imagem: "mousse.jpeg", 
-    descricao: "Vegano não ressega a pele,\n HIDRATAÇÃO EQUILIBRADA,\n CONTROLA A OLEOSIDADE,\n ESTIMULA A RENOVAÇÃO CELULAR,\n DERMATOLOGICAMENTE TESTADO." 
+    descricao: "Vegano não ressega a pele,\n HIDRATAÇÃO EQUILIBRADA,\n CONTROLA A OLEOSIDADE,\n ESTIMULA A RENOVAÇÃO CELULAR,\n DERMATOLOGICAMENTE TESTADO.",
+    disponibilidade: "esgotado" 
   },
   { 
     nome: "Black mask com colageno", 
     preco: 14, 
     imagem: "blackmask.jpeg", 
-    descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele." 
+    descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele.", 
+    disponibilidade: "esgotado"
   },
   { 
     nome: "Esfoliante Corporal", 
@@ -242,14 +244,14 @@ function carregarProdutos(termoBusca = "", mostrarTodos = false) {
           <img id="img-${produto.nome.replace(/\s+/g, '')}" src="${produto.imagem}" alt="${produto.nome}" class="w-full h-64 object-contain rounded">
           ${esgotadoHTML}
         </div>
-        <h2 class="text-lg font-bold mt-2 text-center">${produto.nome}</h2>
-        <p class="text-gray-600 text-center">R$ ${produto.preco.toFixed(2)}</p>
+        <h2 class="text-lg font-bold mt-1 text-center">${produto.nome}</h2>
+        <p class="text-lg font-bold mt-1 text-center">R$ ${produto.preco.toFixed(2)}</p>
         
         <!-- Botão de Descrição: sempre exibido -->
         <div class="w-full flex justify-center mb-2">
           <button onclick="abrirDescricao(this)" data-descricao="${produto.descricao}"
-            class="bg-gray-500 px-3 py-2 rounded text-white flex items-center gap-2">
-            Descrição ->
+            class="bg-[#5d4427] px-3 py-2 rounded text-white flex items-center gap-2">
+            DESCRIÇÃO:
           </button>
         </div>
         

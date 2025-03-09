@@ -162,9 +162,28 @@
     </div>
   </main>
 
-  <button onclick="WhatsAppcontado()" class="bg-[#3521a8] px-1 py-1 rounded text-center text-white flex items-center gap-2 mb-1">
-   🚚Quer novidades ou reposição? Fale com a gente!
-</button>
+<!-- Seção para enviar mensagem via WhatsApp -->
+<div class="bg-[#5d4427] p-4">
+  <!-- Texto acima da barra de pesquisa com tamanho maior -->
+  <p class="text-white text-center mb-2 text-2xl">
+    🚚👇🏼Quer novidades ou reposição? Digite sua sugestão:💕👇🏼
+  </p>
+
+  <!-- Container que contém o input e o botão (layout horizontal) -->
+  <div class="flex items-center gap-2 w-full max-w-md mx-auto">
+    <input
+      type="text"
+      id="mensagemUser"
+      placeholder="Digite sua mensagem..."
+      class="w-full p-2 rounded border focus:outline-none focus:ring-2 focus:ring-[#5d4427]"
+    />
+    <button 
+      onclick="enviarWhatsApp()" 
+      class="bg-green-600 px-3 py-2 rounded text-white hover:bg-green-700 transition">
+      Enviar
+    </button>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="text-center text-white mt-6 bg-[#5d4427]">
@@ -245,6 +264,23 @@
 </div>
 
 <script>
+  function enviarWhatsApp() {
+    // Pega o valor que o usuário digitou
+    let mensagem = document.getElementById("mensagemUser").value;
+
+    // Número do WhatsApp (com DDI e DDD)
+    let numeroWhatsApp = "5584996667324"; 
+
+    // Monta a URL com a mensagem codificada
+    let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+    // Redireciona para o WhatsApp
+    window.location.href = url;
+  }
+</script>
+
+
+<script>
   // Função para abrir o modal "Sobre Nós"
   function abrirSobreNos() {
       document.getElementById("modal-sobre").classList.remove("hidden");
@@ -256,7 +292,6 @@
   }
 </script>
 
-  <!-- Modal de Descrição -->
   <!-- Modal de Descrição -->
 <div id="modal-descricao" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
   <div class="bg-white p-6 rounded-lg w-96 relative text-center">
