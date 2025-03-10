@@ -96,21 +96,55 @@
     const banners = document.querySelectorAll('#banner-carousel .banner-item');
     let currentBanner = 0;
     
-    // Função para mostrar o banner correspondente
-    function showBanner(index) {
-        banners.forEach((banner, i) => {
-            banner.style.opacity = (i === index) ? '1' : '0';
-        });
-    }
-    
-    // Exibe o primeiro banner inicialmente
+// Função para mostrar o banner correspondente e atualizar os dots
+function showBanner(index) {
+    banners.forEach((banner, i) => {
+      banner.style.opacity = (i === index) ? '1' : '0';
+    });
+    updateDots(); // Atualiza as bolinhas
+  }
+
+  // Exibe o primeiro banner inicialmente
+  showBanner(currentBanner);
+
+  // Atualiza os pontos (bolinhas)
+  function updateDots() {
+    const dots = document.querySelectorAll("#banner-dots .dot");
+    dots.forEach((dot, index) => {
+      if (index === currentBanner) {
+        dot.classList.remove("bg-gray-400");
+        dot.classList.add("bg-[#5d4427]"); // ativa em azul
+      } else {
+        dot.classList.remove("bg-[#5d4427]");
+        dot.classList.add("bg-gray-400");
+      }
+    });
+  }
+
+  // Cria o container de pontos e os adiciona dinamicamente
+  const dotsContainer = document.createElement("div");
+  dotsContainer.id = "banner-dots";
+  dotsContainer.className = "absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2";
+
+  // Cria um ponto para cada banner
+  banners.forEach((banner, index) => {
+    const dot = document.createElement("span");
+    dot.className = "dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer";
+    dot.addEventListener("click", () => {
+      currentBanner = index;
+      showBanner(currentBanner);
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  // Adiciona o container de pontos ao carousel
+  document.getElementById("banner-carousel").appendChild(dotsContainer);
+
+  // Altera o banner a cada 5 segundos
+  setInterval(() => {
+    currentBanner = (currentBanner + 1) % banners.length;
     showBanner(currentBanner);
-    
-    // Altera o banner a cada 5 segundos
-    setInterval(() => {
-        currentBanner = (currentBanner + 1) % banners.length;
-        showBanner(currentBanner);
-    }, 5000);
+  }, 5000);
 
     // Função WhatsApp
     function WhatsAppcontado() {
