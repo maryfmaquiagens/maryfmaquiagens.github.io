@@ -126,7 +126,7 @@ const produtos = [
     nome: "Paleta de Sombra", 
     precoAntigo: 24, 
     preco: 20, 
-    imagem: "paletasombra.png", 
+    imagem: "paletasombra.jpeg", 
     descricao: "Define e colore as pálpebras,\n realçando o olhar." 
   },
   { 
@@ -163,14 +163,14 @@ const produtos = [
     nome: "Sérum Rosa Mosqueta", 
     precoAntigo: 20, 
     preco: 15,
-    imagem: "serumrosa.jpeg", 
+    imagem: "serumrosa.jpg", 
     descricao: "Hidrata e auxilia na regeneração\n da pele." 
   },
   { 
     nome: "Spray Fixador de Maquiagens", 
     precoAntigo: 18, 
     preco: 15, 
-    imagem: "spray.jpeg", 
+    imagem: "spray.jpg", 
     descricao: "O Fix Make UP foi criado para aumentar a\n durabilidade da maquiagem de forma leve e bem prática,\n ele possui secagem rápida fazendo com que\n a pele não fique úmida." 
   },
   { 
