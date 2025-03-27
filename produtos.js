@@ -25,8 +25,7 @@ const produtos = [
     precoAntigo: 15, 
     preco: 12,
     imagem: "aguamicelar.jpeg", 
-    descricao: "Água micelar suave que remove impurezas\n e maquiagem sem agredir a pele.",
-    disponibilidade: "esgotado"  // Produto esgotado
+    descricao: "Água micelar suave que remove impurezas\n e maquiagem sem agredir a pele."
   },
   { 
     nome: "Batom", 
@@ -112,8 +111,7 @@ const produtos = [
     precoAntigo: 13, 
     preco: 10,
     imagem: "apontador.jpeg", 
-    descricao: "Mantém lápis de olho e boca afiados\n para maior precisão.",
-    disponibilidade: "esgotado" 
+    descricao: "Mantém lápis de olho e boca afiados\n para maior precisão."
   },
   { 
     nome: "Blindagem", 
@@ -186,8 +184,7 @@ const produtos = [
     precoAntigo: 20, 
     preco: 14, 
     imagem: "blackmask.jpeg", 
-    descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele.", 
-    disponibilidade: "esgotado"
+    descricao: "Remove cravos e espinhas\n controle de oleosidade\n melhora a aparência da pele."
   },
   { 
     nome: "Esfoliante Corporal", 
@@ -222,6 +219,41 @@ const produtos = [
     imagem: "potranslucido.jpeg", 
     descricao: "O pó facial translúcido serve para fixar\n a maquiagem, matificar a pele e controlar a\n oleosidade. Ele é incolor e tem uma textura leve e ultrafina.",
     disponibilidade: "esgotado"
+  },
+  { 
+    nome: "Blush", 
+    precoAntigo: 20, 
+    preco: 18, 
+    imagem: "blush.jpeg", 
+    descricao: "blush" 
+  },
+  { 
+    nome: "Navalha", 
+    precoAntigo: 5, 
+    preco: 4, 
+    imagem: "navalha.jpeg", 
+    descricao: "Navalha" 
+  },
+  { 
+    nome: "Pó Banana", 
+    precoAntigo: 16, 
+    preco: 14, 
+    imagem: "pobanana.jpeg", 
+    descricao: "Pó Banana" 
+  },
+  { 
+    nome: "Brilho Labial", 
+    precoAntigo: 7, 
+    preco: 5, 
+    imagem: "brilholabial.jpeg", 
+    descricao: "Brilho Labial" 
+  },
+  { 
+    nome: "Bruma", 
+    precoAntigo: 16, 
+    preco: 14, 
+    imagem: "bruma.jpeg", 
+    descricao: "Bruma" 
   },
 ];
 
