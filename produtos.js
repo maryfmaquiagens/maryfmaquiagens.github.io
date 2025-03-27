@@ -225,35 +225,35 @@ const produtos = [
     precoAntigo: 20, 
     preco: 18, 
     imagem: "blush.jpeg", 
-    descricao: "blush" 
+    descricao: "Um bom Blush é peça fundamental na maquiagem\n mesmo que seja a mais básica e do dia a dia. O Blush Face Fenzza\n é super fininho e vai dar aquele ar de saúde\n que a gente tanto ama!" 
   },
   { 
     nome: "Navalha", 
     precoAntigo: 5, 
     preco: 4, 
     imagem: "navalha.jpeg", 
-    descricao: "Navalha" 
+    descricao: "-As navalhas para sobrancelha e rosto foram\n projetadas para não irritar ou cortar sua pele enquanto depila!\n-Podendo ser usada em qualquer área delicada de seu rosto buço,\n queixo, buchecha, pescoço e até virilha!\n-É perfeita para para homens e mulheres!\n Seu cabo angular lhe permite uma aparação \ndetalhada e precisa." 
   },
   { 
     nome: "Pó Banana", 
     precoAntigo: 16, 
     preco: 14, 
     imagem: "pobanana.jpeg", 
-    descricao: "Pó Banana" 
+    descricao: "O pó banana é um pó facial translúcido de cor\n amarelada que serve para matizar a pele e fixar a maquiagem.\n Ele pode ser usado no rosto ou no corpo. Benefícios Controla\n a oleosidade da pele, Deixa a pele mais sequinha e uniforme,\n Aumenta a durabilidade da maquiagem, Deixa a pele com um toque aveludado,\n Não acumula nas linhas de expressão." 
   },
   { 
     nome: "Brilho Labial", 
     precoAntigo: 7, 
     preco: 5, 
     imagem: "brilholabial.jpeg", 
-    descricao: "Brilho Labial" 
+    descricao: "Nostalgia é a palavra que melhor descreve este\n produtinho! O Brilho Labial Cheirinho de Morango da Vivai com\n certeza já foi seu companheiro de infância, ele possui\n o formato e cheiro de morango, com dois lados, sendo\n um rosa e um vermelho, para hidratar e melhorar a textura de seus lábios,\n graças a sua textura cremosa" 
   },
   { 
     nome: "Bruma", 
     precoAntigo: 16, 
     preco: 14, 
     imagem: "bruma.jpeg", 
-    descricao: "Bruma" 
+    descricao: "Perfeito para uso antes e depois da maquiagem,\n a Bruma Fixadora de Maquiagem Rosa Mosqueta da Lady Beauty\n não só fixa sua maquiagem como também proporciona um cuidado\n nutritivo para uma pele radiante e rejuvenescida.\n Ideal para todos os tipos de pele, esta bruma oferece um toque final refrescante\n e revitalizante à sua rotina de beleza." 
   },
 ];
 
