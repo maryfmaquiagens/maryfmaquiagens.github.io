@@ -57,12 +57,7 @@ const produtos = [
     precoAntigo: 18, 
     preco: 14,  
     imagem: "gloss_vermelho.jpeg",
-    descricao: "Gloss brilhante que proporciona um toque\n sedoso e um efeito iluminado aos lábios.",
-    variantes: [
-      { cor: "Vermelho", imagem: "gloss_vermelho.jpeg" },
-      { cor: "Rosa", imagem: "gloss_rosa.jpeg" },
-      { cor: "Nude", imagem: "gloss_nude.jpeg" }
-    ]
+    descricao: "Gloss brilhante que proporciona um toque\n sedoso e um efeito iluminado aos lábios."
   },
   { 
     nome: "Máscara Facial", 
@@ -125,7 +120,8 @@ const produtos = [
     precoAntigo: 24, 
     preco: 20, 
     imagem: "paletasombra.jpeg", 
-    descricao: "Define e colore as pálpebras,\n realçando o olhar." 
+    descricao: "Define e colore as pálpebras,\n realçando o olhar.",
+    disponibilidade: "esgotado"
   },
   { 
     nome: "Primer Facil", 
@@ -140,7 +136,8 @@ const produtos = [
     precoAntigo: 19, 
     preco: 14, 
     imagem: "serumclareador.jpeg", 
-    descricao: "Uniformiza o tom da pele e ajuda\n a reduzir manchas." 
+    descricao: "Uniformiza o tom da pele e ajuda\n a reduzir manchas.",
+    disponibilidade: "esgotado"
   },
   { 
     nome: "Lip Gloss", 
@@ -162,7 +159,8 @@ const produtos = [
     precoAntigo: 20, 
     preco: 15,
     imagem: "serumrosa.jpg", 
-    descricao: "Hidrata e auxilia na regeneração\n da pele." 
+    descricao: "Hidrata e auxilia na regeneração\n da pele.",
+    disponibilidade: "esgotado"
   },
   { 
     nome: "Spray Fixador de Maquiagens", 
@@ -239,7 +237,8 @@ const produtos = [
     precoAntigo: 16, 
     preco: 14, 
     imagem: "pobanana.jpeg", 
-    descricao: "O pó banana é um pó facial translúcido de cor\n amarelada que serve para matizar a pele e fixar a maquiagem.\n Ele pode ser usado no rosto ou no corpo. Benefícios Controla\n a oleosidade da pele, Deixa a pele mais sequinha e uniforme,\n Aumenta a durabilidade da maquiagem, Deixa a pele com um toque aveludado,\n Não acumula nas linhas de expressão." 
+    descricao: "O pó banana é um pó facial translúcido de cor\n amarelada que serve para matizar a pele e fixar a maquiagem.\n Ele pode ser usado no rosto ou no corpo. Benefícios Controla\n a oleosidade da pele, Deixa a pele mais sequinha e uniforme,\n Aumenta a durabilidade da maquiagem, Deixa a pele com um toque aveludado,\n Não acumula nas linhas de expressão.",
+    disponibilidade: "esgotado"
   },
   { 
     nome: "Brilho Labial", 

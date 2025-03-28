@@ -101,7 +101,7 @@ function abrirCarrinho() {
     imagem.alt = produto.nome;
     imagem.classList.add("w-12", "h-12", "rounded", "mr-2");
 
-    // Container dos detalhes
+    // Container dos detalhes do produto
     const detalhes = document.createElement("div");
     detalhes.classList.add("flex", "flex-col", "items-center", "w-full");
     
@@ -110,16 +110,29 @@ function abrirCarrinho() {
     nomeEl.classList.add("text-sm", "text-center");
     nomeEl.textContent = produto.nome;
     
+    // Container para o rótulo e o input de quantidade
+    const quantidadeContainer = document.createElement("div");
+    quantidadeContainer.classList.add("flex", "items-center", "mt-1");
+    
+    // Rótulo "Quantidade:"
+    const labelQuantidade = document.createElement("span");
+    labelQuantidade.textContent = "Quantidade:";
+    labelQuantidade.classList.add("text-sm", "font-bold", "mr-1");
+    
     // Campo de quantidade com input
     const inputQuantidade = document.createElement("input");
     inputQuantidade.type = "number";
     inputQuantidade.min = "1";
     inputQuantidade.value = produto.quantidade;
-    inputQuantidade.classList.add("w-16", "text-center", "border", "rounded", "mt-1");
+    inputQuantidade.classList.add("w-16", "text-center", "border", "rounded");
     inputQuantidade.onchange = function() {
       const novaQuantidade = parseInt(this.value);
       atualizarQuantidade(produto.nome, novaQuantidade);
     };
+
+    // Adiciona o rótulo e o input ao container
+    quantidadeContainer.appendChild(labelQuantidade);
+    quantidadeContainer.appendChild(inputQuantidade);
 
     // Preço do produto (calculado pelo preço unitário x quantidade)
     const precoEl = document.createElement("p");
@@ -129,7 +142,7 @@ function abrirCarrinho() {
 
     // Monta o container de detalhes
     detalhes.appendChild(nomeEl);
-    detalhes.appendChild(inputQuantidade);
+    detalhes.appendChild(quantidadeContainer);
     detalhes.appendChild(precoEl);
 
     // Adiciona os elementos ao item
@@ -181,4 +194,3 @@ function comprarProduto(nome, preco) {
   const url = `https://wa.me/5584996667324?text=${encodeURIComponent(mensagem)}`;
   window.location.href = url;
 }
-
